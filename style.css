@@ -277,37 +277,119 @@ mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
   left: 3px;           /* вправо/влево */
 }
 
-/* Панель на телефонах */
+/* Медиа-запрос для мобильных устройств */
 @media (max-width: 768px) {
   #myPanel, #myPanel2 {
     width: 95%;
-    flex-direction: column;
     height: auto;
+    position: relative;
+    top: 10px !important;
+    transform: translateX(-50%);
+    flex-direction: column;
+  }
+
+  #myPanel {
+    height: 120px;
+    padding: 10px 0;
+  }
+
+  #myLogo {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    display: block;
+  }
+
+  #onlineStatus {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 10px auto 0 auto;
+    justify-content: center;
+  }
+
+  #myPanel2 {
+    flex-direction: column;
+    gap: 5px;
+    top: 20px;
   }
 
   .miniPanel {
     width: 100% !important;
-    margin-bottom: 10px;
+    height: auto !important;
+    padding: 10px 0;
+    margin-bottom: 5px;
+  }
+
+  #block2 {
+    padding: 10px 0;
   }
 
   .menuItems {
     flex-wrap: wrap;
-    gap: 20px;
-    padding-left: 10px;
+    justify-content: center;
+    padding-left: 0;
+    gap: 15px;
+  }
+
+  .menuItem {
+    flex-direction: column;
+    font-size: 10px;
+  }
+
+  #block3 {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0;
+  }
+
+  .social-icons {
+    order: 2;
+  }
+
+  #loginBtn {
+    order: 1;
+    width: 80%;
+    margin: 0 auto;
   }
 
   #eventImage {
     width: 100%;
-  }
-
-  .caseItem {
-    width: 45%; /* 2 кейса в ряд */
+    margin-top: 250px;
   }
 
   #casesPanel {
-    top: -200px;
-    flex-wrap: wrap;
+    top: -150px;
     gap: 10px;
-    padding: 20px 0;
+    padding: 10px 0;
+  }
+
+  .caseItem {
+    width: 45%;
+  }
+
+  .price {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media (max-width: 480px) {
+  .menuItem {
+    font-size: 8px;
+  }
+  
+  #onlineNumber {
+    font-size: 13px;
+  }
+  
+  .caseItem {
+    width: 90%;
+  }
+  
+  #casesPanel {
+    top: -100px;
   }
 }
