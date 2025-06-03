@@ -1,0 +1,313 @@
+body {
+  background-color: #1e1e1e;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#myPanel {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1705px;
+  height: 90px;
+  background-color: #2b2228;
+  border-radius: 6px;
+}
+
+#myLogo {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  width: 85px;
+  height: 85px;
+  transition: filter 0.3s ease;
+}
+
+#myLogo:hover {
+  filter: brightness(1.6);
+}
+
+#myPanel2 {
+  position: absolute;
+  top: 95px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1705px;
+  height: 90px;
+  background-color: #1e1e1e;
+  border-radius: 0;
+  display: flex;
+  gap: 2px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.miniPanel {
+  background-color: #1e1a22;
+  border-radius: 1px;
+  height: 90px;
+  flex-shrink: 0;
+}
+
+/* Ширины мини-блоков */
+#block1 {
+  width: 200px;
+  background-color: #28252b;
+}
+
+#block2 {
+  width: 1220px;
+  background-color: #28252b;
+}
+
+#block3 {
+  width: 280px;
+  background-color: #28252b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1px;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.3;
+  transition: opacity 0.2s ease;
+}
+
+.social-icons img:hover {
+  filter: brightness(1); /* лёгкая подсветка */
+  opacity: 1;
+  cursor: pointer;
+}
+
+.social-icons img[src*="discord"] {
+  width: 45px;
+  height: 45px;
+}
+
+.social-icons img[src*="instagram"] {
+  width: 35px;
+  height: 35px;
+}
+
+.social-icons img[src*="facebook"] {
+  width: 26px;
+  height: 26px;
+}
+
+.social-icons img[src*="x"] {
+  width: 35px;
+  height: 35px;
+}
+
+/* Кнопка */
+#loginBtn {
+  background-color: #ffb570;
+  color: #1e1e1e;
+  font-weight: 900;
+  font-size: 13px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  width: 90px;
+  height: 45px;
+  cursor: pointer;
+  position: relative;
+  top: 0px;   /* вверх */
+  left: 0px;  /* вправо */
+}
+
+.menuItems {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ← влево */
+  gap: 30px;
+  height: 100%;
+  padding-left: 30px; /* ← отступ от края */
+  font-family: 'Roboto', sans-serif;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e6dcdc;
+  font-weight: 770;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menuItem img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.menuItem:hover img {
+  opacity: 1;
+}
+
+.menuItem:hover img {
+  opacity: 1;
+}
+
+.badgeWrapper {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -17px;
+  right: 0px;
+  background-color: #d84a4a;
+  color: white;
+  font-size: 8px;
+  font-weight: bold;
+  padding: 2px 2px;
+  border-radius: 3px;
+}
+
+#eventImage {
+  display: block;
+  margin: 188px auto 0 auto;
+  width: 1700px;
+  height: auto;
+  transition: all 0.3s ease;
+  z-index: 1;
+
+-webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+}
+
+#casesPanel {
+  position: relative;
+  top: -400px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%; /* почти на весь экран */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* меньше промежутки между кейсами */
+  justify-content: center;
+  padding: 40px 0;
+  z-index: 2;
+}
+
+.caseItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%; /* 5 кейсов по ширине + отступы */
+  cursor: pointer;
+}
+
+.caseItem img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.caseItem:hover img {
+  transform: translateY(-8px); /* поднимается вверх на 8px */
+}
+
+.price {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;         /* Супер жирно */
+  letter-spacing: -0.5px;   /* Чуть ближе друг к другу */
+  font-size: 14px;          /* Чуть крупнее */
+  background-color: #ffb570;
+  color: #1e1e1e;
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+#onlineStatus {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05); /* Прозрачная белёсая панель */
+  border-radius: 10px;
+  padding: 6px 14px;
+  gap: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#onlineStatus img {
+  width: 30px;
+  height: 30px;
+  opacity: 0.7;
+}
+
+#onlineNumber {
+  font-size: 15px; /* было 17px — уменьшаем */
+  line-height: 1; /* уменьшает вертикальную высоту */
+  font-weight: 700;
+  color: #ffba7a;
+}
+
+.onlineText {
+  display: block;
+  font-size: 8px;
+  color: rgba(255, 230, 192, 0.498); /* полупрозрачный оранжевый */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  /* Позиционирование */
+  position: relative; /* позволяет двигать через top/left */
+  top: -2px;           /* вверх (отрицательное — вверх, положительное — вниз) */
+  left: 3px;           /* вправо/влево */
+}
+
+/* Панель на телефонах */
+@media (max-width: 768px) {
+  #myPanel, #myPanel2 {
+    width: 95%;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .miniPanel {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  .menuItems {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 10px;
+  }
+
+  #eventImage {
+    width: 100%;
+  }
+
+  .caseItem {
+    width: 45%; /* 2 кейса в ряд */
+  }
+
+  #casesPanel {
+    top: -200px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 0;
+  }
+}

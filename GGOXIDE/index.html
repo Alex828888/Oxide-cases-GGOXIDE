@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>GGOXIDE Панель</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+  <!-- Верхняя панель с логотипом -->
+  <div id="myPanel">
+    <img id="myLogo" src="GGLogo.png" alt="Logo">
+    <div id="onlineStatus">
+  <img src="wifi.png" alt="Wi-Fi" />
+  <div>
+    <span id="onlineNumber">1344</span>
+    <span class="onlineText">ONLINE</span>
+  </div>
+</div>
+
+  </div>
+
+  <!-- Нижняя панель с мини-блоками -->
+  <div id="myPanel2">
+    <div class="miniPanel" id="block1"></div>
+    <div class="miniPanel" id="block2">
+      <div class="menuItems">
+  <div class="menuItem">
+    <img src="upgrade.png" alt="Upgrade" />
+    <span>UPGRADE</span>
+  </div>
+  <div class="menuItem">
+    <img src="contracts.png" alt="Contracts" />
+    <span>CONTRACTS</span>
+  </div>
+  <div class="menuItem badgeWrapper">
+    <div class="badge">NEW</div>
+    <img src="battles.png" alt="Battles" />
+    <span>BATTLES</span>
+  </div>
+</div>
+    </div>
+    <div class="miniPanel" id="block3">
+  <div class="social-icons">
+    <img src="instagram.png" alt="Instagram">
+    <img src="discord.png" alt="Discord">
+    <img src="facebook.png" alt="Facebook">
+    <img src="x.png" alt="X">
+  </div>
+  <button id="loginBtn">LOG IN</button>
+</div>
+  </div>
+
+  <img id="eventImage" src="Event.png" alt="Event Image">
+
+<script>
+  // Если нужно поднять основную панель
+  document.getElementById("myPanel").style.top = "1px";
+</script>
+
+<script>
+  let currentOnline = Math.floor(Math.random() * (1500 - 1300 + 1)) + 1300; // стартовое значение
+
+  function updateOnline() {
+    const change = Math.floor(Math.random() * 10) - 5; // изменение от -5 до +4
+    currentOnline += change;
+
+    // Ограничим диапазон, чтобы не улетало в космос или минус
+    if (currentOnline < 1200) currentOnline = 1200;
+    if (currentOnline > 1600) currentOnline = 1600;
+
+    document.getElementById("onlineNumber").textContent = currentOnline;
+  }
+
+  updateOnline();
+  setInterval(updateOnline, 4000); // Обновление каждые 4 сек
+</script>
+
+  <!-- Панель с кейсами -->
+<div id="casesPanel">
+  <div class="caseItem">
+    <img src="case1.png" alt="Case 1">
+    <span class="price">1999 G</span>
+  </div>
+  <div class="caseItem">
+    <img src="case2.png" alt="Case 2">
+    <span class="price">19 G</span>
+  </div>
+  <div class="caseItem">
+    <img src="case3.png" alt="Case 3">
+    <span class="price">499 G</span>
+  </div>
+  <div class="caseItem">
+    <img src="case4.png" alt="Case 4">
+    <span class="price">99 G</span>
+  </div>
+  <div class="caseItem">
+  <img src="case5.png" alt="Case 5">
+  <span class="price">299 G</span>
+</div>
+</div>
+</body>
+</html>
